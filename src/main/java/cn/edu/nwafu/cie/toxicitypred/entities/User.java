@@ -1,13 +1,10 @@
 package cn.edu.nwafu.cie.toxicitypred.entities;
 
-/**
- * @author: SungLee
- * @date: 2018-10-01 17:23
- * @description: 用户类（测试用）
- */
 public class User {
     private String id;
-    private String userId;
+
+    private String userid;
+
     private String pwd;
 
     public String getId() {
@@ -15,15 +12,15 @@ public class User {
     }
 
     public void setId(String id) {
-        this.id = id;
+        this.id = id == null ? null : id.trim();
     }
 
-    public String getUserId() {
-        return userId;
+    public String getUserid() {
+        return userid;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUserid(String userid) {
+        this.userid = userid == null ? null : userid.trim();
     }
 
     public String getPwd() {
@@ -31,7 +28,6 @@ public class User {
     }
 
     public void setPwd(String pwd) {
-        this.pwd = pwd;
+        this.pwd = pwd == null ? null : pwd.trim();
     }
 }
-

@@ -15,10 +15,10 @@ public class RegService implements IRegService {
     private UserMapper userMapper;
 
     @Override
-    public boolean regUser(String uerId, String pwd) {
+    public boolean regUser(String id, String uerId, String pwd) {
         Boolean flag;
         try {
-            flag = userMapper.insertUsers(uerId, pwd);
+            flag = userMapper.insertUsers(id,uerId, pwd);
         } catch (Exception e) {
             return false;
         }

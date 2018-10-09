@@ -11,9 +11,9 @@ import org.apache.ibatis.annotations.Select;
  * @description: 用户mapper接口
  */
 public interface UserMapper {
-    @Select("select * from users where userId = #{userId}")
+    @Select("select * from user where userId = #{userId}")
     User findUserByUserid(@Param("userId") String userId);
-    @Insert("insert into users (userId,pwd) values (#{userId},#{pwd})")
-    boolean insertUsers (@Param("userId") String userId,@Param("pwd") String pwd);
+    @Insert("insert into user (id,userId,pwd) values (#{id},#{userId},#{pwd})")
+    boolean insertUsers(@Param("id") String id, @Param("userId") String userId, @Param("pwd") String pwd);
 }
 

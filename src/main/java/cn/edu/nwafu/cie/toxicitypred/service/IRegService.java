@@ -6,5 +6,5 @@ package cn.edu.nwafu.cie.toxicitypred.service;
  * @description: 注册业务逻辑接口
  */
 public interface IRegService {
-    boolean regUser(String uerId,String pwd);
+    boolean regUser(String id, String uerId,String pwd);
 }

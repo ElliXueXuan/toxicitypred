@@ -32,7 +32,7 @@ public class HelloWorld {
     Boolean reg(@RequestParam("loginPwd") String loginNum, @RequestParam("userId") String userId ){
         String pwd = creatMD5(loginNum);
         System.out.println(userId+":"+loginNum);
-        regService.regUser(userId,pwd);
+        regService.regUser("1", userId,pwd);
         return true;
     }
     private String creatMD5(String loginNum){
