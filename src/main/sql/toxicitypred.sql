@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost_3306
-Source Server Version : 50520
+Source Server Version : 50723
 Source Host           : localhost:3306
-Source Database       : toxicity_pre
+Source Database       : toxicitypred
 
 Target Server Type    : MYSQL
-Target Server Version : 50520
+Target Server Version : 50723
 File Encoding         : 65001
 
-Date: 2018-10-01 17:12:09
+Date: 2018-10-09 17:53:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -29,9 +29,9 @@ CREATE TABLE `algal_chronic` (
   `logKow` double DEFAULT NULL COMMENT '藻慢性描述符logKow',
   `ATS6m` double DEFAULT NULL COMMENT '藻慢性描述符ATS6m',
   `NOEC_72h` varchar(100) DEFAULT NULL COMMENT '72小时无观测效应浓度，>1mg无毒，≤1mg有毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '藻慢性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '藻慢性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(100) DEFAULT NULL COMMENT '藻慢性的实验值',
+  `pre_value` varchar(100) DEFAULT NULL COMMENT '藻慢性的预测值',
+  `datatype` varchar(100) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=553 DEFAULT CHARSET=utf8mb4;
 
@@ -605,9 +605,9 @@ CREATE TABLE `algal_chronic_nies` (
   `logKow` double DEFAULT NULL COMMENT '藻慢性描述符logKow',
   `ATS6m` double DEFAULT NULL COMMENT '藻慢性描述符ATS6m',
   `NOEC_72h` varchar(100) DEFAULT NULL COMMENT '72小时无观测效应浓度，>1mg无毒，≤1mg有毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '藻慢性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '藻慢性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '藻慢性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '藻慢性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=553 DEFAULT CHARSET=utf8mb4;
 
@@ -1182,9 +1182,9 @@ CREATE TABLE `daphnia_acute` (
   `Eig08_AEAbo` double DEFAULT NULL COMMENT '溞急性描述符Eig08_AEA(bo)',
   `B02NCl` double DEFAULT NULL COMMENT '溞急性描述符B02[N-Cl]',
   `EC50_48h` varchar(255) DEFAULT NULL COMMENT '48 h半数效应浓度（48 h EC50），≤ 100 mg/L有毒，>100无毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '溞急性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '溞急性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '溞急性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '溞急性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1484 DEFAULT CHARSET=utf8mb4;
 
@@ -2690,9 +2690,9 @@ CREATE TABLE `daphnia_acute_nies` (
   `Eig08_AEAbo` double DEFAULT NULL COMMENT '溞急性描述符Eig08_AEA(bo)',
   `B02NCl` double DEFAULT NULL COMMENT '溞急性描述符B02[N-Cl]',
   `EC50_48h` varchar(255) DEFAULT NULL COMMENT '48 h半数效应浓度（48 h EC50），≤ 100 mg/L有毒，>100无毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '溞急性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '溞急性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '溞急性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '溞急性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1484 DEFAULT CHARSET=utf8mb4;
 
@@ -4197,9 +4197,9 @@ CREATE TABLE `daphnia_chronic` (
   `SM02_AEAdm` double DEFAULT NULL COMMENT '溞慢性描述符SM02_AEA(dm)',
   `RDF075s` double DEFAULT NULL COMMENT '溞慢性描述符RDF075s',
   `NOEC_21d` varchar(100) DEFAULT NULL COMMENT '21天无观测效应浓度，>1mg无毒，≤1mg有毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '溞慢性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '溞慢性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '溞慢性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '溞慢性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=406 DEFAULT CHARSET=utf8mb4;
 
@@ -4626,9 +4626,9 @@ CREATE TABLE `daphnia_chronic_nies` (
   `SM02_AEAdm` double DEFAULT NULL COMMENT '溞慢性描述符SM02_AEA(dm)',
   `RDF075s` double DEFAULT NULL COMMENT '溞慢性描述符RDF075s',
   `NOEC_21d` varchar(100) DEFAULT NULL COMMENT '21天无观测效应浓度，>1mg无毒，≤1mg有毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '溞慢性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '溞慢性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '溞慢性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '溞慢性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=406 DEFAULT CHARSET=utf8mb4;
 
@@ -5053,9 +5053,9 @@ CREATE TABLE `fish_chronic` (
   `MPC07` double DEFAULT NULL COMMENT '鱼慢性描述符MPC07',
   `CATS2D_05_LL` double DEFAULT NULL COMMENT '鱼慢性描述符CATS2D_05_LL',
   `LC50_96h` varchar(100) DEFAULT NULL COMMENT '96 h半数致死浓度（96 h LC50），>100mg/L无毒，≤100mg/L有毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '鱼慢性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '鱼慢性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '鱼慢性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '鱼慢性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=635 DEFAULT CHARSET=utf8mb4;
 
@@ -5709,9 +5709,9 @@ CREATE TABLE `fish_chronic_nies` (
   `MPC07` double DEFAULT NULL COMMENT '鱼慢性描述符MPC07',
   `CATS2D_05_LL` double DEFAULT NULL COMMENT '鱼慢性描述符CATS2D_05_LL',
   `LC50_96h` varchar(100) DEFAULT NULL COMMENT '96 h半数致死浓度（96 h LC50），>100mg/L无毒，≤100mg/L有毒',
-  `exp_value` char(255) DEFAULT NULL COMMENT '鱼慢性的实验值',
-  `pre_value` char(255) DEFAULT NULL COMMENT '鱼慢性的预测值',
-  `datatype` char(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
+  `exp_value` varchar(255) DEFAULT NULL COMMENT '鱼慢性的实验值',
+  `pre_value` varchar(255) DEFAULT NULL COMMENT '鱼慢性的预测值',
+  `datatype` varchar(255) DEFAULT NULL COMMENT '训练集or验证集or测试集',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=635 DEFAULT CHARSET=utf8mb4;
 
@@ -6352,3 +6352,20 @@ INSERT INTO `fish_chronic_nies` VALUES ('631', '007212-44-4', 'OC(C=C)(CCC=C(CCC
 INSERT INTO `fish_chronic_nies` VALUES ('632', '000108-59-8', 'O=C(OC)CC(=O)OC', '0.33', '0', '0', '786', 'I', 'I', 'validate');
 INSERT INTO `fish_chronic_nies` VALUES ('633', '000527-60-6', 'Oc(c(cc(c1)C)C)c1C', '0', '1.099', '0', '13', 'A', 'A', 'validate');
 INSERT INTO `fish_chronic_nies` VALUES ('634', '000108-41-8', 'c(cccc1Cl)(c1)C', '0', '0', '0', '786', 'I', 'I', 'validate');
+
+-- ----------------------------
+-- Table structure for `user`
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `id` varchar(255) NOT NULL DEFAULT '',
+  `userId` varchar(255) DEFAULT NULL,
+  `pwd` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('', 'qqq', 'qqq');
+INSERT INTO `user` VALUES ('1', '123', '47bce5c74f589f4867dbd57e9ca9f808');
